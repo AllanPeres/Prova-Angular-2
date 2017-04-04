@@ -1,0 +1,24 @@
+<div class="alert alert-success" role="alert">
+  <h3>Faça o Login..</h3>
+</div>
+
+<form>
+  <div class="row">
+    <div class="col">
+      <div class="form-group">
+        <label for="login">Usuario</label>
+        <input type="text" [(ngModel)]="user.login" name="login" class="form-control" />
+      </div>
+    </div>
+    <div class="col">
+      <div class="form-group">
+        <label for="pass">Senha</label>
+        <input type="password" [(ngModel)]="user.pass" name="password" class="form-control" />
+      </div>
+    </div>
+    <div class="w-100"></div>
+    <div class="col">
+      <button (click)="doLogin(user.login, user.pass)" class="btn btn-success" type="button">OK</button>
+    </div>
+  </div>
+</form>

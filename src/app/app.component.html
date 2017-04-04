@@ -1,3 +1,26 @@
-<h1>
-  {{title}}
-</h1>
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+  <a class="navbar-brand" routerLink="home" routerLinkActive="active">Prova Angular</a>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/policia/lista" routerLinkActive="active">Policiais <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/ladrao/lista" routerLinkActive="active">Ladrões <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="logout()" *ngIf="estaLogado()">Sair</button>
+    </form>
+  </div>
+</nav>
+
+
+<div class="card">
+  <div class="card-block">
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
